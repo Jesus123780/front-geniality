@@ -3,12 +3,7 @@ import { FC } from "react";
 import {
   IconProps,
   IconMiniCheck,
-  IconLogoCMF,
-  IconQrCode,
-  IconLogoCMFBlue,
   IconClose,
-  IconMainLogo,
-  IconStrokeLogo,
   IconChecked,
 } from "../../assets/public/Icons";
 
@@ -26,13 +21,8 @@ interface IconPropsComponent {
 
 const Icons: IconMap = {
   MiniCheck: IconMiniCheck,
-  LogoCMF: IconLogoCMF,
-  IconQrCode: IconQrCode,
-  IconLogoCMFBlue: IconLogoCMFBlue,
   IconClose: IconClose,
-  logo: IconMainLogo,
-  IconChecked: IconChecked,
-  IconStrokeLogo: IconStrokeLogo,
+  IconChecked: IconChecked
 }
 
 const GetIcon = (key: string): FC<IconProps> | null => {
