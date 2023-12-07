@@ -1,0 +1,6 @@
+.container-choose-business {
+    background-color: var(--color-neutral-gray-white);
+    margin-top: 2.5625rem;
+    padding: 35px;
+    width: 80%;
+}

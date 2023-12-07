@@ -1,0 +1,6 @@
+.container_scan {
+    background-color: var(--color-neutral-gray-white);
+    margin-top: 1.5625rem;
+    padding: 35px;
+    width: 80%;
+}

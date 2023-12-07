@@ -1,0 +1,17 @@
+export const cropperOptions = {
+    style: { height: 400, width: '100%' },
+    zoomTo: 0.5,
+    initialAspectRatio: 5 / 1,
+    preview: '',
+    viewMode: 1,
+    minCropBoxHeight: 50,
+    minCropBoxWidth: 100,
+    background: false,
+    responsive: true,
+    autoCropArea: 1,
+    checkOrientation: true,
+    guides: true,
+    cropBoxResizable: false,
+    dragMode: 'move',
+    cropBoxMovable: false,
+  }

@@ -1,0 +1,16 @@
+.select {
+    outline: none;
+    font-family: PFont-Light;
+    font-weight: 500;
+    border: 1px solid #D0D5DD;
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 0px 1px inset;
+    font-size: 18px;
+    width: -webkit-fill-available;
+    border-radius: 15px;
+    color: #707070;
+    padding: 20px 55px 20px 10px;
+    margin: 0;
+}
+
+.option {
+}
