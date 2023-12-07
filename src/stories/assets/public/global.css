@@ -6,17 +6,17 @@
   --color-loaders-background: #f3f3f3;
   --color-loaders-fore-ground: #ecebeb;
 
-  --color-primary-green: #026E18;
-  --color-primary-green2: #399001;
-  --color-primary-green-dark: #024C16;
-  --color-primary-green-header: linear-gradient(270deg, #53A600 0%, #399001 100%) 0% 0% no-repeat padding-box;
-  --color-primary-green-gradient-button: linear-gradient(270deg, #53A600 0%, #399001 100%) 0% 0% no-repeat padding-box;
+  --color-primary-orange-red: #F95450;
+  --color-primary-orange-red2: #F95450;
+  --color-primary-orange-red-dark: #F95450;
+  --color-primary-orange-red-header: linear-gradient(270deg, #E86241 0%, #F95450 100%) 0% 0% no-repeat padding-box;
+  --color-primary-orange-red-gradient-button: linear-gradient(270deg, #E86241 0%, #F95450 100%) 0% 0% no-repeat padding-box;
   --color-primary-red-bg: #FFF4F4;
   --color-primary-disabled: #c4c4c4;
   --color-primary-pink-light: #FFC2C2;
 
-  --color-secondary-green-dark: #00586C;
-  --color-secondary-green-bg: #E4F7FC;
+  --color-secondary-orange-red-dark: #00586C;
+  --color-secondary-orange-red-bg: #E4F7FC;
   --color-secondary-blue: #011E41;
 
   --color-neutral-black: #1A1A1A;
@@ -26,14 +26,14 @@
   --color-neutral-gray-silver: #C4C4C4;
   --color-neutral-gray-white: #F9F9F9;
   --color-neutral-white: #FFFFFF;
-  
+
   --color-campaigns-red: #da291c;
   --color-campaigns-black: #212322;
-  --color-campaigns-green: #53A600;
+  --color-campaigns-orange-red: #E86241;
   --color-campaigns-orange: #e07c00;
   --color-campaigns-yellow: #FEDD00;
   --color-campaigns-turquoise: #63BBAE;
-  
+
   --color-feedback-success-light: #24ba00;
   --color-feedback-success-dark: #1B8900;
   --color-feedback-error-light: #F80000;
@@ -42,7 +42,7 @@
   --color-feedback-warning-dark: #CC870F;
 
   --color-text-primary: #da291c;
-  --color-text-secondary: #3F9600;
+  --color-text-secondary: #F95750;
   --color-text-gray-light: #666666;
   --color-text-inactive: #C4C4C4;
   --color-text-black: #1A1A1A;
@@ -53,7 +53,7 @@
 
   --color-background-primary: #da291c;
   --color-background-primary-light: #FFF4F4;
-  --color-background-secondary: #3F9600;
+  --color-background-secondary: #F95750;
   --color-background-secondary-light: #E4F7FC;
   --color-background-gray: #E5E5E5;
   --color-background-gray-light: #f5f5f5;
@@ -61,8 +61,8 @@
   --color-background-pink: #ec938d;
   --color-background-blue: #011E41;
 
-  --color-icons-primary: #026E18;
-  --color-icons-secondary: #3F9600;
+  --color-icons-primary: #F95450;
+  --color-icons-secondary: #F95750;
   --color-icons-gray: #666666;
   --color-icons-gray-light: #C4C4C4;
   --color-icons-black: #1A1A1A;

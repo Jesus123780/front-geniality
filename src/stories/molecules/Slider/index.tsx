@@ -1,41 +1,91 @@
-import React from 'react'
-import SwiperCore from 'swiper'
-import {
-    Swiper,
-    SwiperSlide
-} from 'swiper/react'
-import {
-    Navigation,
-    Pagination,
-    A11y
-} from 'swiper/modules'
-
-SwiperCore.use([Navigation, Pagination, A11y]);
+import React, { CSSProperties } from "react"
+import { Button } from "../../atoms"
+import styles from "./styles.module.css"
 
 interface CarouselProps {
-    children: React.ReactNode[] | React.ReactNode;
-    navigation?: boolean;
-    pagination?: boolean;
-    scrollbar?: boolean;
+  children: React.ReactNode
+  active: number
+  showNext?: boolean
+  showPrev?: boolean
+  moveRight?: () => void
+  moveLeft?: () => void
+  maxView?: number
+}
+
+type CustomCSSProperties = {
+  "--active"?: number
+  "--offset"?: number
+  "--direction"?: number
+  "--abs-offset"?: number
 }
 
 export const Carousel: React.FC<CarouselProps> = ({
-    children,
-    navigation = true,
-    pagination = true,
-    scrollbar = true,
+  active,
+  children,
+  maxView,
+  showNext = false,
+  showPrev = false,
+  moveRight = () => {
+    return
+  },
+  moveLeft = () => {
+    return
+  },
 }) => {
+  const MAX_VISIBILITY = maxView ?? 3
+  const count = React.Children.count(children)
+
   return (
-    <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        navigation={navigation}
-        pagination={pagination ? { clickable: true } : false}
-        scrollbar={scrollbar ? { draggable: true } : false}
-    >
-      {React.Children.map(children, (child, index) => (
-        <SwiperSlide key={index}>{child}</SwiperSlide>
-      ))}
-    </Swiper>
-  );
-};
+    <div>
+      <div className={styles["carousel"]}>
+        {React.Children.map(children, (child, i) => {
+          const customStyles: CSSProperties & CustomCSSProperties = {
+            "--active": i === active ? 1 : 0,
+            "--offset": (active - i) / 3,
+            "--direction": Math.sign(active - i),
+            "--abs-offset": Math.abs(active - i) / 3,
+            pointerEvents: active === i ? "auto" : "none",
+            opacity: Math.abs(active - i) >= MAX_VISIBILITY ? "0" : "1",
+            display: Math.abs(active - i) > MAX_VISIBILITY ? "none" : "block",
+          }
+
+          return (
+            <div className={styles["card-container"]} style={customStyles}>
+              {child}
+            </div>
+          )
+        })}
+      </div>
+      <div className={styles['counter']}>
+          <span>{active + 1}/{count}</span>
+        </div>
+      <div className={styles['container-buttons-steps']}>
+        {showPrev && <div>
+          <Button
+            padding="20px"
+            borderRadius="5px"
+            width="300px"
+            primary
+            disabled={active === 0}
+            onClick={moveLeft}
+          >
+            false
+          </Button>
+        </div>}
+
+        {showNext && <div>
+          <Button
+            padding="20px"
+            borderRadius="5px"
+            width="300px"
+            primary
+            disabled={active === count - 1}
+            onClick={moveRight}
+          >
+            True
+          </Button>
+        </div>}
+      </div>
+    </div>
+  )
+}

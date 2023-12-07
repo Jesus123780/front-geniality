@@ -138,7 +138,7 @@ code {
 }
 
 .swiper-horizontal * .swiper-pagination-bullet-active {
-  background-color: var(--color-primary-green) !important;
+  background-color: var(--color-primary-orange-red) !important;
 }
 
 .swiper-horizontal>.swiper-pagination-bullet {

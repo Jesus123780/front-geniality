@@ -1,0 +1,23 @@
+.container-banner {
+    align-items: center;
+    background-image: url('../../assets/public/Images/background_galaxi.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px;
+    border: 1px solid #949090;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: center;
+    padding: 0 1rem;
+    text-align: center;
+    width: 400px;
+}
+
+.container-banner h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}

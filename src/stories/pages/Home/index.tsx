@@ -1,37 +1,33 @@
-import { Icon } from '../../atoms/Icon'
 import {
+  Button,
   Column,
-  Image,
-  Paragraph,
-  Row,
   Text
 } from '../../atoms'
+import quizMan from '../../assets/public/Images/QuizMan.png'
 import styles from './Home.module.css'
-import ImageAsistan from '../../assets/public/Images/asistant.png'
 
-export const Home = () => {
+export const Home = ({
+  redirect = () => {}
+ }) => {
   return (
     <div className={styles['container']}>
       <Column className={styles['col-1']}>
+        <Text className={styles['start-title']}>Welcome to the</Text>
+        <Text className={styles['start-title']}><span>T</span>rivia <span>C</span>hallenge!</Text>
         <div className={styles['container_icon']}>
-          <Icon icon='LogoCMF' />
+          <img src={quizMan} alt='quizman' className={styles['quizMan']} />
         </div>
         <div className={styles['text-container']}>
+        <Text className={styles['start-title']}>
+          You Will be presented
+          with 10 True or False
+          questions.
+        </Text>
 
-        <Text className={styles['start-title']}>IMPORTANTE:</Text>
-        <Row className={styles['row-1']}>
-          <Icon icon='IconQrCode' size={68} />
-          <Paragraph className={styles.description}>
-            Acerca el código QR del cliente al lector para ser registrado
-          </Paragraph>
-        </Row>
+        <Button width='400px' primary onClick={redirect}>
+          <Text className={styles['start-button']}>BEGIN</Text>
+        </Button>
       </div>
-      </Column>
-
-      <Column className={styles['col-2']}>
-        <Image src={ImageAsistan} alt='' width='100%' height='100%' />
-        <div className={styles['col-2_lateral-column']}>
-        </div>
       </Column>
     </div>
   )

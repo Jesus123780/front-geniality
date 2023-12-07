@@ -1,1 +1,0 @@
-export { CreditMobilLayout }  from './CreditMobilLayout'

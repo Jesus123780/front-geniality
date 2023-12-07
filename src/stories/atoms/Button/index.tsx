@@ -10,9 +10,9 @@ type ButtonProps = {
   type?: string;
   primary?: boolean;
   disabled?: boolean;
-  onClick?: () => void;
   children?: React.ReactNode;
   styles?: React.CSSProperties;
+  onClick?: () => void;
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -36,7 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
     outline: 'none',
     width,
     fontSize,
-    color: primary ? 'white' : 'var(--color-primary-green)',
+    color: primary ? 'white' : 'var(--color-primary-orange-red)',
     ...styles
   };
 

@@ -1,0 +1,39 @@
+.carousel {
+    align-items: center;
+    height: 300px;
+    justify-content: center;
+    left: 50%;
+    perspective: 500px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.card-container {
+    filter: blur(calc(var(--abs-offset) * 1rem));
+    height: 100%;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    transform: rotateY(calc(var(--offset) * 50deg)) scaleY(calc(1 + var(--abs-offset) * -0.4)) translateZ(calc(var(--abs-offset) * -30rem)) translateX(calc(var(--direction) * -5rem));
+    transition: all 0.3s ease-out;
+    width: 80%;
+}
+
+.container-buttons-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 30px auto;
+}
+
+.counter {
+    color: var(--color-neutral-black);
+    font-size: var(--font-size-titles-lg);
+    font-weight: 700;
+    margin: 0 1rem;
+    text-align: center;
+}

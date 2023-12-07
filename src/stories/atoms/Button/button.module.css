@@ -1,20 +1,27 @@
 .button {
+    background: var(--color-primary-orange-red-gradient-button);
     border-radius: 2.1875rem;
-    background: var(--color-primary-green-gradient-button);
-    outline: none;
     border: none;
-    padding: 20px;
+    box-shadow: 0px 4px 6px -1px rgba(249, 84, 80, 0.7);
     font-family: 'PFont-Regular';
+    outline: none;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.button:active {
+    transform: translateY(2px);
 }
 
 .button:disabled {
     background: #D0D5DD 0% 0% no-repeat padding-box;
     color: #666B76 !important;
+    box-shadow: 0px 4px 6px -1px rgba(170, 169, 169, 0.7);
+
 }
 
 .button-secondary {
     border-radius: 2.1875rem;
-    background: var(--color-primary-green-gradient-button);
+    background: var(--color-primary-orange-red-gradient-button);
 }
 
 

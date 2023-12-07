@@ -1,5 +1,10 @@
 import { Home } from '../../stories/pages'
 
 export const ContainerHome = () => {
-  return <Home />
+
+  const redirect = () => {
+    window.location.href = '/quiz';
+  }
+
+  return <Home redirect={redirect} />
 }
